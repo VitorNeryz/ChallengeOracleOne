@@ -5,6 +5,8 @@ botaoCriptografar.addEventListener("click" ,function(event){
 	event.preventDefault();
 
 	var string = inputPrincipal.value.toLowerCase() ;
+	string = string.replace(/[^a-zA-Zs]/g, "");
+	console.log(string);
 	var letras = string.split("", string.length);
 	console.log(letras);
 	var frase = codifica(letras);
