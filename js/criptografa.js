@@ -5,15 +5,18 @@ botaoCriptografar.addEventListener("click" ,function(event){
 	event.preventDefault();
 
 	var string = inputPrincipal.value.toLowerCase() ;
-	string = string.replace(/[^a-zA-Zs]/g, "");
-	console.log(string);
-	var letras = string.split("", string.length);
-	console.log(letras);
-	var frase = codifica(letras);
-	console.log(frase);
-	document.getElementById("msg-resultado").value = frase;
+	var elegivel = verificaSimbolos(string);
 
-})
+	if(elegivel){
+		console.log(string);
+		var letras = string.split("", string.length);
+		console.log(letras);
+		var frase = codifica(letras);
+		console.log(frase);
+		document.getElementById("msg-resultado").value = frase;
+	}
+		
+});
 
 function codifica(letra){
 	var frase = "" ;
@@ -44,6 +47,17 @@ function codifica(letra){
 	return frase ; 
 }
 
+function verificaSimbolos(string){
+	var regex = /\W|_/;
+	var textoErro = document.getElementById("msg-erro");
+	if(regex.test(string) == true ) {
+		textoErro.classList.remove("invisivel");
+		return false
+	}else {
+		textoErro.classList.add("invisivel");
+		return true
+	}
+}
 // regras contra acentuação e simbolos especiais
 
 /* Regras Codificador: 
