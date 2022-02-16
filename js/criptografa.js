@@ -45,7 +45,7 @@ function codifica(letra){
 }
 
 function verificaSimbolos(string){
-	var regex = /^[a-zA-Z 0-9_-]{2,20}$/;
+	var regex = /\W|_/;
 	var textoErro = document.getElementById("msg-erro");
 
 	if(!regex.test(string)) {
