@@ -47,8 +47,7 @@ function codifica(letra){
 function verificaSimbolos(string){
 	var regex = /\W|_/;
 	var textoErro = document.getElementById("msg-erro");
-
-	if(!regex.test(string)) {
+	if(regex.test(string) == true ) {
 		textoErro.classList.remove("invisivel");
 		return false
 	}else {
