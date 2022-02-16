@@ -5,4 +5,5 @@ botaoCopiar.addEventListener("click", function(){
 	inputFinal.select();
 	document.execCommand('copy');
 	alert("Copiado para área de transferência");
+	inputPrincipal.focus();
 })

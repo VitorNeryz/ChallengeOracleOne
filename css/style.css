@@ -70,7 +70,7 @@ body {
   position: absolute;
   width: 467px;
   height: 92px;
-  left: 445px;
+  left: 430px;
   top: 5px;
   font-family: Zilla Slab Highlight;
   font-style: normal;
@@ -131,7 +131,7 @@ body {
   border-radius: 0.5em;
   width: 30vw;
   height: auto;
-  top: 220px
+  top: 205px
 }
 .form-box {
   position: absolute;
