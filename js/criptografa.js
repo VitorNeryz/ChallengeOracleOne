@@ -8,11 +8,8 @@ botaoCriptografar.addEventListener("click" ,function(event){
 	var elegivel = verificaSimbolos(string);
 
 	if(elegivel){
-		console.log(string);
 		var letras = string.split("", string.length);
-		console.log(letras);
 		var frase = codifica(letras);
-		console.log(frase);
 		document.getElementById("msg-resultado").value = frase;
 	}
 		
@@ -58,16 +55,3 @@ function verificaSimbolos(string){
 		return true
 	}
 }
-// regras contra acentuação e simbolos especiais
-
-/* Regras Codificador: 
-"e" é convertido para "enter" 
-"i" é convertido para "imes"
-"a" é convertido para "ai"
-"o" é convertido para "ober"
-"u" é convertido para "ufat"
-Apenas letras minúsculas
-Não permite acentuação   
-*/
-
-
