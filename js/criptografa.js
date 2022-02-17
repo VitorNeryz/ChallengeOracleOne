@@ -45,12 +45,12 @@ function codifica(letra){
 }
 
 function verificaSimbolos(string){
-	var regex = /^[a-zA-Z0-9_-]{2,20}$/;
+	var regex = /[a-zA-Z0-9_-]{2,20}$/;
 	var textoErro = document.getElementById("msg-erro");
-	if(regex.test(string) == true ) {
+	if(regex.test(string) == false) {
 		textoErro.classList.remove("invisivel");
 		return false
-	}else {
+	}else{
 		textoErro.classList.add("invisivel");
 		return true
 	}
